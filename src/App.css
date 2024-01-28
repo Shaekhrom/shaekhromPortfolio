@@ -13,6 +13,7 @@
   top: 0;
   width: 100%;
   border-bottom: 1px solid black;
+  z-index: 2;
 }
 
 .navBarDiv {
@@ -38,6 +39,11 @@
 .blackContainer {
   background-color: black;
   padding-bottom: 10%;
+  
+}
+
+.body{
+  z-index: 1;
 }
 
 @media screen and (min-width: 600px) {

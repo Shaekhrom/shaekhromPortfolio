@@ -1,6 +1,8 @@
 import './App.css';
 import AboutMe from './components/abtMe/AbtMe.jsx'
 import Skills from './components/skills/Skills.jsx'
+import Projects from './components/projects/Projects.jsx'
+import Contacts from './components/contact/Contact.jsx'
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
         </div>                             
       </header>
 
-      <body>
+      <body className='body'>
         <div>
           <AboutMe/>
         </div>
@@ -28,10 +30,10 @@ function App() {
           <Skills/>
         </div>
         <div>
-
+          <Projects/>
         </div>
-        <div>
-
+        <div className='blackContainer'>
+          <Contacts/>
         </div>
       </body>
     </div>
