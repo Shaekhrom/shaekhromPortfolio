@@ -1,4 +1,7 @@
 import './ContactStyles.css'
+import linkedin from '../../icons/linkedin.svg'
+import github from '../../icons/github.svg'
+import twitter from '../../icons/twitter.svg'
 
 function Contact() {
     return (
@@ -34,6 +37,12 @@ function Contact() {
             </div>
             <span>Send</span>
           </button>
+
+          <div className='footerContainer'>
+            <div><img src={linkedin} alt="Linkedin" className="custom-footer-image"></img> </div>
+            <div><img src={github} alt="GitHub" className="custom-footer-image"></img> </div>
+            <div><img src={twitter} alt="Twitter" className="custom-footer-image"></img> </div>
+          </div>
 
         </form>
       </div>
