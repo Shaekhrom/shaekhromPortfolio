@@ -147,23 +147,32 @@ button {
   .footerContainer {
     display: flex; 
     justify-content: center; 
-    align-items: center;     
+    align-items: center;  
+    gap: 10vmin;
     }
   
   .custom-footer-image {
+      display: inline-block;
+      padding: 1vmin;
       background-color: rgb(255, 255, 255);
       border-radius: 10px;
-      width: 20vmin;
+      max-width: 10vmin;
       height: auto;
       justify-content: center; 
       align-items: center; 
-      
+      border-color: white;            
+  }
+
+  .custom-footer-image:hover{
+    cursor: pointer;
   }
   
   @media (max-width: 1550px) {
       .custom-footer-image {
-          width: 20vmin;
+          width: 10vmin;
           height: auto;
+          padding: 1vmin;
+
       }
    }
   

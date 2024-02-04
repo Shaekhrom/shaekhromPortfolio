@@ -3,6 +3,25 @@ import linkedin from '../../icons/linkedin.svg'
 import github from '../../icons/github.svg'
 import twitter from '../../icons/twitter.svg'
 
+
+const handleLiClick = () => {
+  const linkedinURL = 'https://www.linkedin.com/in/alejandro-barbacil-castro-623742296/';
+
+  window.open(linkedinURL, '_blank');
+};
+
+const handleGitHubClick = () => {
+  const githubURL = 'https://github.com/Shaekhrom?tab=repositories';
+
+  window.open(githubURL, '_blank');
+};
+
+const handleTwitterClick = () => {
+  const githubURL = 'https://twitter.com/shaekhrom';
+
+  window.open(githubURL, '_blank');
+};
+
 function Contact() {
     return (
       <div className="ContactContainer">
@@ -39,9 +58,9 @@ function Contact() {
           </button>
 
           <div className='footerContainer'>
-            <div><img src={linkedin} alt="Linkedin" className="custom-footer-image"></img> </div>
-            <div><img src={github} alt="GitHub" className="custom-footer-image"></img> </div>
-            <div><img src={twitter} alt="Twitter" className="custom-footer-image"></img> </div>
+            <div><img src={linkedin} alt="Linkedin" className="custom-footer-image" onClick={handleLiClick}></img> </div>
+            <div><img src={github} alt="GitHub" className="custom-footer-image" onClick={handleGitHubClick}></img> </div>
+            <div><img src={twitter} alt="Twitter" className="custom-footer-image" onClick={handleTwitterClick}></img> </div>
           </div>
 
         </form>
