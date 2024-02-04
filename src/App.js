@@ -5,12 +5,13 @@ import Skills from './components/skills/Skills.jsx';
 import Projects from './components/projects/Projects.jsx';
 import Contacts from './components/contact/Contact.jsx';
 
+//Fully created by @Shaekhrom/Alejandro Barbacil
 class App extends Component {
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      activeDiv: 'div1', // Inicialmente, se asume que el primer div está visible
+      activeDiv: 'div1', // Div 1 appears first
     };
   }
 
@@ -25,7 +26,7 @@ class App extends Component {
   handleScroll = () => {
     const divsToObserve = ['div1', 'div2', 'div3', 'div4'];
 
-    // Encuentra el div actualmente visible
+    // Finds visible div
     let currentDiv = 'div1';
     let maxPercentage = 0;
 
@@ -43,16 +44,16 @@ class App extends Component {
       }
     }
 
-    // Actualiza el estado para resaltar el elemento de la barra de navegación correspondiente
+    // Updates the state to highlight the corresponding navigation bar item
     this.setState({ activeDiv: currentDiv });
   };
 
   scrollToDiv = (divId) => {
     if (divId === 'div1') {
-      // Si es el contenedor 'About Me', hacer scroll al inicio de la página
+      // If it is the 'About Me' container, scroll to the top of the page
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      // Si es cualquier otro contenedor, hacer scroll al div correspondiente
+      // If it is any other container, scroll to the corresponding div
       const divElement = document.getElementById(divId);
       if (divElement) {
         divElement.scrollIntoView({ behavior: 'smooth' });
@@ -94,6 +95,7 @@ class App extends Component {
           </div>
         </header>
 
+         
         <div className="body" ref={this.myRef}>
           <div id="div1">
             <AboutMe />
